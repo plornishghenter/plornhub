@@ -17,8 +17,8 @@ main {
 }
 
 .logo {
-  width: 150px;
-  height: auto;
+  height: 42.85px;
+  width: auto;
 }
 
 h3 {
@@ -88,4 +88,36 @@ a:focus, button:focus {
 
 hr {
   width: 100%;
+}
+
+@media screen and (width <= 480px) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 33.6px;
+    margin: 1rem 0 0.8rem;
+  }
+
+  a, p, button {
+    font-size: 14px;
+  }
+
+  p {
+    line-height: 1.57;
+  }
+
+  .logo {
+    height: 26px;
+  }
+
+  .button-group {
+    margin-top: 30px;
+  }
+
+  .button-group > button, .button-group > .button {
+    width: 266px;
+  }
+
+  .copyright {
+    font-size: 14px !important;
+  }
 }
