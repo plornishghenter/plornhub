@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Free Plorn | Plornhub</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./shared-style.css" />
+    <style>
+      .plorn {
+        width: 100vw;
+      }
+      p {
+        text-align: center;
+        margin: 20px 0;
+        padding: 0 2rem;
+        max-width: 750px;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
+    <script>
+      const handleProblem = (event) => {
+        let currentLast = event.target.parentNode;
+        const toCopy = [
+          document.createElement('p'),
+          currentLast.previousElementSibling,
+          currentLast
+        ];
+        for (const element of toCopy) {
+          const clone = element.cloneNode(true);
+          currentLast.insertAdjacentElement('afterend', clone);
+          currentLast = clone;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <main>
+      <p>
+        <img class="logo" src="./plornhub-logo.svg" />
+      </p>
+      <h3>Notice to Law Enforcement</h3>
+      <p>
+        <span>Stop abusing and killing people, or if you haven't started don't. Stop your peers from abusing and killing people. When they do abuse or kill people, seek and support justice for their victims, and be vocal about it. Since you are a violence worker, or operate as support staff for violence work, you presumably see a difference between appropriate and inappropriate violence. Did you know that police in the US are just as likely to shoot an armed white person as an unarmed black person? See <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4634878/">here</a>. To be clear, explanations such as local crime rates, including race-specific crime rates, do not impact those actions.</span>
+      </p>
+      <div class="button-group">
+        <a class="button" href="./notice-to-users.html">I agree to all that</a>
+        <button onclick="handleProblem(event)">I would prefer to be part of the problem</button>
+      </div>
+      <br />
+      <br />
+      <p>
+        <span class="copyright">© Plornhub.net, 2026</span>
+      </p>
+    </main>
+  </body>
+</html>
